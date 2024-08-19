@@ -1,0 +1,29 @@
+{
+  "toDo": [
+    {
+      "id": 1,
+      "tarefa": "Arrumar a Cama",
+      "status": "Concluido"
+    },
+    {
+      "id": 2,
+      "tarefa": "Molhar as Plantas",
+      "status": "Concluido"
+    },
+    {
+      "id": 3,
+      "tarefa": "Arrumar Casa",
+      "status": "Concluido"
+    },
+    {
+      "id": 4,
+      "tarefa": "Fazer Exercícios físicos",
+      "status": "A Fazer"
+    },
+    {
+      "id": 5,
+      "tarefa": "Limpar Espelhos/Telas",
+      "status": "A Fazer"
+    }
+  ]
+}
