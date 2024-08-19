@@ -1,1 +1,19 @@
-<p>to-do works!</p>
+<div class="container">
+  <h2>Lista de Afazeres</h2>
+
+  <div>
+      <input type="text" id="newTask" placeholder="Nova tarefa...">
+      <button onclick="addTask()">Adicionar</button>
+  </div>
+
+  <div class="filter">
+      <label for="statusFilter">Filtrar por status: </label>
+      <select id="statusFilter" onchange="filterTasks()">
+          <option value="all">Todos</option>
+          <option value="completed">Concluídos</option>
+          <option value="pending">A fazer</option>
+      </select>
+  </div>
+
+  <ul id="todoList"></ul>
+</div>
