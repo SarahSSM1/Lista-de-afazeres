@@ -1,19 +1,29 @@
-<div class="container">
-  <h2>Lista de Afazeres</h2>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Gerenciamento de Atividades</li>
+  </ol>
+</nav>
 
-  <div>
-      <input type="text" id="newTask" placeholder="Nova tarefa...">
-      <button onclick="addTask()">Adicionar</button>
+  <div class="container">
+    <h2>Lista de Tarefas</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tarefa</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarefa of tarefas">
+          <td>{{ tarefa.id }}</td>
+          <td>{{ tarefa.tarefa }}</td>
+          <td>{{ tarefa.status }}</td>
+        </tr>
+
+      </tbody>
+    </table>
   </div>
 
-  <div class="filter">
-      <label for="statusFilter">Filtrar por status: </label>
-      <select id="statusFilter" onchange="filterTasks()">
-          <option value="all">Todos</option>
-          <option value="completed">Concluídos</option>
-          <option value="pending">A fazer</option>
-      </select>
-  </div>
 
-  <ul id="todoList"></ul>
-</div>
+
