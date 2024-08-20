@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ToDo } from '../models/toDo';
+import { ToDoService } from '../service/to-do.service';
+
 
 @Component({
   selector: 'app-to-do',
@@ -6,7 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./to-do.component.scss']
 })
 export class ToDoComponent {
+  tarefas!: ToDo[];
 
-  ngOnInit(): void {}
+  constructor(private service: ToDoService) {}
+
+  ngOnInit(): void {
+    this.getLista()
+  }
+
+  getLista(){
+    this.service.getListaToDo()
+    .subscribe( r => {this.tarefas = r});
+  }
+
+
+
 }
 
